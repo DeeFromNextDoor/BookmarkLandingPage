@@ -1,7 +1,7 @@
 import React from "react";
-import Downloads from "./downloads/Downloads";
-import Faqs from "./faqs/Faqs";
 import { downloadsFaqs } from "../../utils/Data";
+import Downloads from "./Downloads";
+import Faqs from "./Faqs";
 
 const DownloadFaqs = () => {
   return (

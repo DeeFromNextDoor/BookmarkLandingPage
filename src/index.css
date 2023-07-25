@@ -219,6 +219,14 @@
   line-height: 30px;
   letter-spacing: 0.5px;
   color: var(--Grayish-Blue);
+  max-height: 0;
+  transition: all 0.5s ease-in-out;
+}
+
+.single.expanded .faqAnswer {
+  max-height: 1000px;
+  padding: 15px 0;
+  transition: all 0.5s ease-in-out;
 }
 
 .faqsWrapper .single {

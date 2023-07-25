@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import SingleFaq from "../singleFaq/SingleFaq";
+import React from "react";
 import { Link } from "react-router-dom";
+import SingleFaq from "./SingleFaq";
 
 const Faqs = ({ faqs }) => {
   return (

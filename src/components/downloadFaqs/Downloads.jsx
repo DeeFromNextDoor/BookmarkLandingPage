@@ -1,5 +1,5 @@
 import React from "react";
-import ExtensionBox from "../extensions/ExtensionBox";
+import ExtensionBox from "./ExtensionBox";
 
 const Downloads = ({ title, texts, chrome, fireFox, opera }) => {
   return (
