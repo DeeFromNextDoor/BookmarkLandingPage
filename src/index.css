@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Rubik:wght@400;500&display=swap");
+@import url("https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css");
 
 :root {
   /*Colors */
@@ -18,5 +19,242 @@
   font-family: "Rubik", sans-serif;
 }
 
+.download-faqs {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.download-faqs .top {
+  text-align: center;
+}
+
+.download-faqs .downloads {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.downloads .downloadTexts {
+  width: 40%;
+  margin: auto;
+}
+
+.downloadTexts .title {
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 15px;
+}
+
+.downloadTexts .texts {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--Grayish-Blue);
+  margin-bottom: 15px;
+}
+
+.downloads .extensions {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 22px;
+  height: 400px;
+}
+
+.extensions .extension {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-self: flex-start;
+  border-radius: 5px;
+  background-color: #fff;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.1),
+    0px 4px 4px hsla(231, 69%, 60%, 0.2);
+  height: 80%;
+}
+
+.extensions .chrome {
+  align-self: flex-start;
+}
+
+.extensions .fireFox {
+  align-self: center;
+}
+
+.extensions .opera {
+  align-self: flex-end;
+}
+
+.extensions .box {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  gap: 25px;
+  justify-content: center;
+  height: 100%;
+  min-width: 20px;
+}
+
+.extensions .box .boxTop {
+  display: grid;
+  gap: 30px;
+  padding: 5px 5px 35px 5px;
+  border-bottom: 2px dotted rgba(128, 128, 128, 0.189);
+}
+
+.box .boxTop img {
+  max-height: 100%;
+  object-fit: cover;
+  margin: auto;
+}
+
+.box .boxTop .title {
+  font-size: 16px;
+  letter-spacing: 1px;
+  font-weight: 500;
+  margin-bottom: 5px;
+}
+
+.box .boxTop .version {
+  font-size: 11px;
+  letter-spacing: 1px;
+  color: var(--Grayish-Blue);
+}
+
+.boxBottom {
+  max-width: 100%;
+}
+
+.extensions .box a,
+.faqs a {
+  text-decoration: none;
+  max-width: 100%;
+  padding: 12px 12px;
+  border-radius: 5px;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: #fff;
+  background-color: var(--Soft-Blue);
+  transition: all 0.3s ease-in;
+}
+
+.extensions .box a:hover,
+.faqs a:hover {
+  background: transparent;
+  border: 2px solid var(--Soft-Blue);
+  color: var(--Soft-Blue);
+}
+
+.faqs {
+  max-width: 50%;
+  margin: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+.download-faqs .down {
+  width: 100%;
+  margin-top: 70px;
+}
+
+.faqs .faqsHead {
+  display: flex;
+  text-align: center;
+  flex-direction: column;
+  gap: 15px;
+  margin-bottom: 30px;
+}
+
+.faqs .faqsHead .title {
+  letter-spacing: 1px;
+  font-weight: 500;
+}
+
+.faqs .faqsHead .subTitle {
+  font-size: 14px;
+  font-weight: 400;
+  letter-spacing: 1px;
+  color: var(--Grayish-Blue);
+}
+
+.faqsWrapper {
+  border-top: 1px solid rgba(128, 128, 128, 0.142);
+  border-bottom: 1px solid rgba(128, 128, 128, 0.142);
+  margin-bottom: 60px;
+}
+
+.faqsWrapper .faqTitle {
+  display: flex;
+  justify-content: space-between;
+  padding: 5px 0;
+  font-weight: 400;
+}
+
+.faqsWrapper .faqTitle:hover {
+  cursor: pointer;
+  color: var(--Soft-Red);
+}
+.bi-chevron-up {
+  color: var(--Soft-Red);
+  font-size: 20px;
+  font-weight: 600;
+}
+.bi-chevron-down {
+  color: var(--Soft-Blue);
+  font-size: 20px;
+  font-weight: 600;
+}
+
+.single .faqAnswer {
+  font-size: 14px;
+  font-weight: 400;
+  line-height: 30px;
+  letter-spacing: 0.5px;
+  color: var(--Grayish-Blue);
+}
+
+.faqsWrapper .single {
+  display: flex;
+  flex-direction: column;
+  padding: 15px 0;
+  border-bottom: 1px solid rgba(128, 128, 128, 0.142);
+}
+
 @media (max-width: 650px) {
+  .downloads .extensions {
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+    height: auto;
+  }
+  .downloads .extension {
+    width: 70%;
+    height: 300px;
+  }
+  .extensions .chrome {
+    align-self: center;
+  }
+
+  .extensions .fireFox {
+    align-self: center;
+  }
+
+  .extensions .opera {
+    align-self: center;
+  }
+  .downloads .downloadTexts {
+    width: 90%;
+    margin-bottom: 20px;
+  }
+  .faqs {
+    max-width: 90%;
+  }
 }
