@@ -17,7 +17,7 @@ const SimpleBookmark = () => {
         </div>
       </div>
 
-      <span>
+      <div className="span-logo">
         <svg
           xmlns="http://www.w3.org/2000/svg"
           xmlnsXlink="http://www.w3.org/1999/xlink"
@@ -76,10 +76,10 @@ const SimpleBookmark = () => {
               y1="71.675%"
               y2="29.014%"
             >
-              <stop-color offset="0%" stop-color="#151515" />
-              <stop-color offset="100%" stop-color="#3D3D3D" />
+              <stop offset="0%" stopColor="#151515" />
+              <stop offset="100%" stopColor="#3D3D3D" />
             </linearGradient>
-            <rect id="e" width="536" height="346" y="3" rx="8" />
+            <rect id="e" width="530" height="346" y="3" rx="8" />
           </defs>
           <g
             fill="none"
@@ -282,7 +282,7 @@ const SimpleBookmark = () => {
             </g>
           </g>
         </svg>
-      </span>
+      </div>
     </div>
   );
   return (

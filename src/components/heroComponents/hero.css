@@ -2,6 +2,7 @@
 :root {
   /* Colors */
   --soft-blue: hsl(231, 69%, 60%);
+  --soft-red: hsl(0, 94%, 66%);
 
   /* Text color */
   --faded-black: rgb(116, 116, 116);
@@ -9,22 +10,30 @@
 
 .heroSect {
   padding: 50px 60px;
+  transition: all 400ms ease;
 }
 
 .innerHeroSect {
-  width: auto;
+  width: 100%;
   height: auto;
   display: flex;
-  flex-wrap: unset;
+  transition: all 400ms ease;
 }
 
-.innerHeroSect span {
-  height: 400px;
+.innerHeroSect .span-logo {
+  flex: 1;
+}
+
+.innerHeroSect .span-logo svg {
+  max-width: 100% !important;
+  max-height: 400px !important;
+  object-fit: cover;
 }
 
 .simpleManager {
-  padding: 150px 50px;
-  width: 45%;
+  padding: 100px 50px;
+  flex: 1;
+  transition: all 400ms ease;
 }
 
 .simpleManager h2 {
@@ -43,6 +52,7 @@
   display: flex;
   margin-top: 20px;
   gap: 15px;
+  transition: all 400ms ease;
 }
 
 .forBtns button {
@@ -50,9 +60,18 @@
   border-radius: 5px;
   cursor: pointer;
   box-shadow: -1px -1px 10px rgba(0, 0, 0, 0.737);
+  cursor: pointer;
+  transition: all 300ms ease;
 }
 
 .onChromeBtn {
+  background-color: var(--soft-blue);
+  color: white;
+  transition: all 400ms ease;
+}
+
+.forBtns button:hover {
+  background-color: white;
   color: var(--soft-blue);
   border: 2px solid var(--soft-blue);
 }
@@ -60,12 +79,14 @@
 /* Features section */
 .features {
   margin-top: 30px;
+  transition: all 400ms ease;
 }
 
 .features .featureDetail {
   text-align: center;
   width: 38%;
   margin: auto;
+  transition: all 400ms ease;
 }
 
 .featureDetail p {
@@ -74,7 +95,7 @@
 
 .slideHolder {
   height: auto;
-  padding: 0 40px;
+  transition: all 400ms ease;
 }
 
 .slider {
@@ -84,6 +105,7 @@
   justify-content: space-evenly;
   padding: 18px 0;
   border-bottom: 1px solid var(--faded-black);
+  transition: all 400ms ease;
 }
 
 .slideBtn {
@@ -91,6 +113,12 @@
   border: none;
   position: relative;
   padding: 12px 18px;
+  cursor: pointer;
+  transition: all 300ms ease;
+}
+
+.slideBtn:hover {
+  color: var(--soft-red);
 }
 
 .slideBtn::after {
@@ -111,11 +139,12 @@
 
 .slideWrapper {
   position: relative;
-  width: 98%;
+  width: 100%;
   display: grid;
   grid-auto-flow: column;
   grid-auto-columns: 100%;
   overflow: hidden;
+  transition: all 400ms ease;
 }
 
 .slides {
@@ -123,12 +152,20 @@
   /* margin: 5px auto; */
   display: flex;
   gap: 50px;
-  padding: 20px;
+  padding: 20px 0;
   justify-content: center;
+  transition: all 400ms ease;
+}
+
+.slides > * {
+  transition: all 1000ms ease;
 }
 
 .slides span {
   border: 5px solid black;
+  border-radius: 10px;
+  height: 400px;
+  overflow: hidden;
 }
 .content {
   width: 40%;
@@ -151,4 +188,120 @@
   background-color: var(--soft-blue);
   color: white;
   cursor: pointer;
+}
+
+/* Media section */
+@media (max-width: 1000px) {
+  .heroSect {
+    padding: 50px 40px;
+  }
+
+  .simpleManager {
+    padding: 50px;
+  }
+
+  .simpleManager h2 {
+    font-size: 30px;
+  }
+
+  .slider {
+    width: 100%;
+  }
+}
+
+@media (max-width: 750px) {
+  .heroSect {
+    padding: 50px 40px;
+  }
+
+  .innerHeroSect {
+    flex-direction: column;
+    flex-wrap: wrap-reverse;
+    margin: auto;
+  }
+
+  .innerHeroSect span {
+    width: 100%;
+    display: flex;
+    order: 0;
+  }
+
+  .innerHeroSect span > svg {
+    width: 100%;
+    height: 100%;
+    flex-wrap: wrap;
+  }
+
+  .simpleManager {
+    padding: 0;
+    width: 100%;
+    position: relative;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+    order: 1;
+  }
+
+  .simpleManager h2 {
+    margin-top: 30px;
+    width: 100%;
+    font-size: 30px;
+  }
+
+  .simpleManager p {
+    text-align: center;
+  }
+
+  .features {
+    margin-top: 50px;
+  }
+
+  .features .featureDetail {
+    width: 100%;
+  }
+
+  .featureDetail h2 {
+    margin: 10px;
+  }
+
+  .slider {
+    flex-direction: column;
+    border-bottom: none;
+    width: 100%;
+  }
+
+  .slideBtn {
+    border-top: 1px solid var(--faded-black);
+    border-bottom: 1px solid var(--faded-black);
+    padding: 18px;
+  }
+
+  .slideBtn::after {
+    top: 100%;
+  }
+
+  .slideBtn:focus::after {
+    width: 100%;
+  }
+
+  .slides {
+    flex-direction: column;
+    gap: 0;
+  }
+
+  .content {
+    width: 100%;
+    text-align: center;
+  }
+
+  .content h2 {
+    margin-top: 30px;
+  }
+
+  .content button {
+    display: none;
+  }
 }
