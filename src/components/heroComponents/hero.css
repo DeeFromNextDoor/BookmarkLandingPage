@@ -5,7 +5,8 @@
   --soft-red: hsl(0, 94%, 66%);
 
   /* Text color */
-  --faded-black: rgb(116, 116, 116);
+
+  --faded-black: hsl(229, 8%, 60%);
 }
 
 .heroSect {
@@ -84,7 +85,7 @@
 
 .features .featureDetail {
   text-align: center;
-  width: 38%;
+  width: 50%;
   margin: auto;
   transition: all 400ms ease;
 }

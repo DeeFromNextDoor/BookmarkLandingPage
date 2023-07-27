@@ -33,7 +33,7 @@ const FeatureArray = () => {
             <div className="content">
               <h2>{slideItem.title}</h2>
               <p>{slideItem.desc}</p>
-              <button onClick={handleSwitch}>{slideItem.btnTag}</button>
+              <button>{slideItem.btnTag}</button>
             </div>
           </div>
         ))}
