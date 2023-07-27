@@ -24,9 +24,9 @@
   flex: 1;
 }
 
-.innerHeroSect .span-logo svg {
+.innerHeroSect .span-logo img {
   max-width: 100% !important;
-  max-height: 400px !important;
+  max-height: 100% !important;
   object-fit: cover;
 }
 
@@ -164,11 +164,19 @@
 .slides span {
   border: 5px solid black;
   border-radius: 10px;
-  height: 400px;
-  overflow: hidden;
+  /* height: 100%; */
+  flex: 1;
 }
+
+.slides span img {
+  max-width: 100% !important;
+  max-height: 100% !important;
+  object-fit: cover;
+}
+
 .content {
   width: 40%;
+  flex: 1;
 }
 
 .content h2 {
