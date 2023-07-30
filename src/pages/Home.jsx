@@ -1,10 +1,10 @@
 import React from "react";
-import DownloadFaqs from "../components/downloadFaqs/DownloadFaqs";
+import SimpleBookmark from "../components/heroComponents/SimpleBookmark";
 
 const Home = () => {
   return (
     <div className="home">
-      <DownloadFaqs />
+      <SimpleBookmark />
     </div>
   );
 };
