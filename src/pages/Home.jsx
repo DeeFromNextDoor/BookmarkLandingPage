@@ -3,7 +3,7 @@ import SimpleBookmark from "../components/heroComponents/SimpleBookmark";
 
 const Home = () => {
   return (
-    <div>
+    <div className="home">
       <SimpleBookmark />
     </div>
   );
